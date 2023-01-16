@@ -29,7 +29,7 @@ synth -top {design_name}
 #
 
 flatten
-opt
+# opt
 
 # setundef -zero
 #
@@ -39,7 +39,7 @@ opt
 #
 
 setundef -zero
-clean
+# clean
 
 #-------------------------------------------------------------------------
 # Technology mapping
@@ -48,7 +48,7 @@ clean
 # Technology mapping for sequential cells
 
 dfflibmap -liberty inputs/adk/stdcells.lib
-opt
+# opt
 
 # Technology mapping for combinational cells
 
@@ -62,7 +62,7 @@ abc -liberty inputs/adk/stdcells.lib \
 
 hilomap -hicell {tie_hi_cell} {tie_hi_port}
 hilomap -locell {tie_lo_cell} {tie_lo_port}
-opt
+# opt
 
 #-------------------------------------------------------------------------
 # Clean up
@@ -96,7 +96,7 @@ insbuf -buf {min_buf_cell} {min_buf_port_i} {min_buf_port_o}
 #
 
 #clean -purge
-clean
+# clean
 rename -enumerate
 
 #-------------------------------------------------------------------------
